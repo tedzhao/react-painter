@@ -1,6 +1,8 @@
 import React from 'react'
+import { CanvasElementType } from '../util/constans'
+
 interface ToolboxProps{
-    onItemSelected: (itemType: string) => void
+    onItemSelected: (itemType: CanvasElementType) => void
 }
 
 interface ToolboxItemProps{
@@ -29,20 +31,16 @@ export const ToolboxEllipseItem = (props: ToolboxItemProps) => {
 const DefaultToolboxItemWidth = 32
 const DefaultToolboxItemHeight = 32
 
-const LineItem = "Line"
-const RectItem = "Rect"
-const EllipseItem = "Ellipse" 
-
 export const Toolbox = (props: ToolboxProps) => {
     return <div className="toolbox">
         <p>Toolbox</p>
-        <div onClick={ () => props.onItemSelected(LineItem) }>
+        <div onClick={ () => props.onItemSelected(CanvasElementType.Line) }>
             <ToolboxLineItem width={DefaultToolboxItemWidth} height={DefaultToolboxItemHeight}/>
         </div>
-        <div onClick={ () => props.onItemSelected(RectItem) }>
+        <div onClick={ () => props.onItemSelected(CanvasElementType.Rect) }>
             <ToolboxRectItem width={DefaultToolboxItemWidth} height={DefaultToolboxItemHeight}/>
         </div>
-        <div onClick={ () => props.onItemSelected(EllipseItem) }>
+        <div onClick={ () => props.onItemSelected(CanvasElementType.Ellipse) }>
             <ToolboxEllipseItem width={DefaultToolboxItemWidth} height={DefaultToolboxItemHeight}/>
         </div>
     </div>
