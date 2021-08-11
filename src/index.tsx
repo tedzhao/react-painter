@@ -1,9 +1,9 @@
 import React from 'react'
 import ReactDom from 'react-dom'
 
-import Hello from './components/Hello'
+import { App } from './components/App'
 
 ReactDom.render(
-    <Hello name="TypeScript" />, 
+    <App />, 
     document.querySelectorAll('.app')[0]
 )

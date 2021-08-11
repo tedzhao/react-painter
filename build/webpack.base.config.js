@@ -18,12 +18,16 @@ module.exports = {
                     loader: 'ts-loader'
                 }],
                 exclude: /node_modules/
+            },
+            {
+                test: /\.css$/i,
+                use: ["style-loader", "css-loader"],
             }
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: './src/tpl/index.html'
+            template: './src/templates/index.html'
         })
     ],
     optimization: {

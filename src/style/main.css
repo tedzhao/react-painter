@@ -1,0 +1,26 @@
+.app{
+    display: flex;
+}
+
+.toolbox svg{
+    stroke: #0d6abf;
+    stroke-width: 1px;
+    fill:none;
+}
+
+.toolbox div{
+    margin-top: 10px;
+}
+
+.toolbox{
+    padding: 10px 20px;
+    width: 200px;
+    background-color: #eee;
+    height:95vh;
+}
+
+.canvas{
+    flex-grow: 1;
+    border: solid 1px #ddd;
+    padding: 10px;
+}
